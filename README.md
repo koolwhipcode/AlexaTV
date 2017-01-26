@@ -1,3 +1,5 @@
+#NOT FINISHED!!!!!
+
 # AlexaTV
 A little background about me and this project. I recently got an alexa and I wanted to see how to develop a skill for alexa. I came up with the idea of controlling my TV with my voice. This is my first time using python so my python coding it pretty sub par but bare with me. I also liked this project because I use AWS IOT for the first time which I found out is a pretty useful product.
 
