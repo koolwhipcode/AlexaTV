@@ -4,7 +4,7 @@ import json
 import paho.mqtt.client as paho
 import ssl
 import socket
-
+import time
 
 def handler(event, context):
     print('Incoming Request: ' + json.dumps(event, separators=(',', ':')))
@@ -68,8 +68,8 @@ def turn_on(intent, session):
     mqttc.connect(awshost, awsport, keepalive=60)
     mqttc.loop_start()
     mqttc.publish("ON", None ,  qos=1)
-    mqttc.loop_stop()
-    mqttc.disconnect()
+    time.sleep(2)
+    
     # Send response back to the Alexa Voice Skill
     return build_response(build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
@@ -92,9 +92,8 @@ def turn_off(intent, session):
     mqttc.connect(awshost, awsport, keepalive=60)
     mqttc.loop_start()
     mqttc.publish("OFF" , None, qos=1)
-
-    mqttc.loop_stop()
-    mqttc.disconnect()
+    time.sleep(2)
+    
     # Send response back to the Alexa Voice Skill
     return build_response(build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
