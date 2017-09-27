@@ -1,3 +1,5 @@
+Look back at this repo makes me realize how far my python skills have come. This is some bad coding on my part
+
 #NOT FINISHED!!!!!
 
 # AlexaTV
